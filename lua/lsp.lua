@@ -25,6 +25,7 @@ return {
         'marksman',
         'stylelint_lsp',
         'emmet_language_server',
+        'ts_ls',
       },
     }
     require('mason-null-ls').setup {

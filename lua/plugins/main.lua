@@ -1,6 +1,13 @@
 return {
-  { 'pocco81/auto-save.nvim', debounce_delay = 1500 },
-
+  {
+    'pocco81/auto-save.nvim',
+    config = function()
+      require('auto-save').setup {
+        debounce_delay = 1500,
+        vim.api.nvim_set_keymap('n', '<leader>as', ':ASToggle<CR>', { noremap = true, silent = true }),
+      }
+    end,
+  },
   { 'jay-babu/mason-null-ls.nvim' },
   { 'jose-elias-alvarez/null-ls.nvim' },
   {
